@@ -1,0 +1,120 @@
+<div class="container">
+  <h1>Update Patent Data</h1>
+
+  <a href="/patient" routerLink="/patient" class="btn btn-secondary mb-2 mt-5">Back</a>
+  <form method="post">
+    <div>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          required
+          [(ngModel)]="patientReq.firstName"
+          name="firstName"
+        />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastName"
+          required
+          [(ngModel)]="patientReq.lastName"
+          name="lastName"
+        />
+      </div>
+      <div class="form-group">
+        <label for="dateOfBirth">Date of Birth</label>
+        <input
+          class="form-control"
+          id="dateOfBirth"
+          placeholder="yyyy-mm-dd"
+          name="dateOfBirth"
+          (click)="d.toggle()"
+          readonly [(ngModel)]="dateOfBirth"
+          ngbDatepicker #d="ngbDatepicker">
+
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+
+        <select class="form-control"
+                id="gender"
+                name="gender"
+                required
+                aria-label="Default select example"
+                [(ngModel)]="patientReq.gender">
+
+          <option selected value="MALE">Male</option>
+          <option selected value="FEMALE">Female</option>
+        </select>
+
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input
+          type="text"
+          class="form-control"
+          id="address"
+          required
+          [(ngModel)]="patientReq.address"
+          name="address"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="suburb">Suburb</label>
+        <input
+          type="text"
+          class="form-control"
+          id="suburb"
+          required
+          [(ngModel)]="patientReq.suburb"
+          name="suburb"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="state">State</label>
+        <input
+          type="text"
+          class="form-control"
+          id="state"
+          required
+          [(ngModel)]="patientReq.state"
+          name="state"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="postCode">Post Code</label>
+        <input
+          type="text"
+          class="form-control"
+          id="postCode"
+          required
+          [(ngModel)]="patientReq.postCode"
+          name="postCode"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phoneNumber"
+          required
+          [(ngModel)]="patientReq.phoneNumber"
+          name="phoneNumber"
+        />
+      </div>
+
+      <button (click)="updatePatient()" class="btn btn-success mb-2">Submit</button>
+    </div>
+  </form>
+</div>
